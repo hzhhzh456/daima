@@ -1,21 +1,23 @@
 #include<stdio.h>
-int main()
-{
-	int a[10],b[10], i,j,n,count=0;
-	scanf("%d",&n);
-	for (i = 0; i < n; i++)
-	{
-		scanf("%d",&a[i]);
-	}
-	for (j = n-1; j >= 0; j--)
-	{
-		b[count] = a[j];
-		count++;
-	}
-	printf("%d",b[0]);
-	for (i = 1; i < n; i++)
-	{
-		printf(" %d", b[i]);
-	}
+#define N 5 
+int main() 
+{ 
+    int a[N]={9,6,5,4,1},i,temp;
+    printf("\n逆序前为\n");
+    for(i=0;i <N;i++)
+        printf("%4d",a[i]); 
+     
+    for(i=0;i<N/2;i++)
+    {
+        temp=a[i];
+        a[i]=a[N-i-1];
+        a[N-i-1]=temp; 
+    } 
+ 
+    printf("\n 逆序后为\n"); 
+    for(i=0;i <N; i++)
+        printf("%4d",a[i]); 
+ 
+    printf("\n");
+    return 0;
 }
-
