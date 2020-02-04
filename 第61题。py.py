@@ -1,0 +1,18 @@
+a=int(input("请输入第一个数"))
+b=int(input("请输入第二个数"))
+c=int(input("请输入第三个数"))
+if(a>b):
+    if(b>c):
+        print("%d>%d>%d"%(a,b,c))
+    else:
+        print("%d>%d>%d"%(a,c,b))
+if(b>a):
+    if(a>c):
+        print("%d>%d>%d"%(b,a,c))
+    else:
+        print("%d>%d>%d"%(b,c,a))
+if(c>a):
+    if(a>b):
+        print("%d>%d>%d"%(a,a,b))
+    else:
+        print("%d>%d>%d"%(c,b,a))
